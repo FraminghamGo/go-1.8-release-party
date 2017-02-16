@@ -1,8 +1,36 @@
 Go 1.8 Release Party
-YOUR MEETUP
+Framingham Go
 16 Feb 2017
 
-YOUR MEETUP
+* Welcome to the Framingham Go meetup!
+
+.image img/framginghamgo.jpg
+
+This meetup will only be as successful as those participating in it will make it. Please play an active role within the meetup. We need *your* help.
+
+- Volunteer positions available
+- Speakers needed
+
+* Location Sponsor - Staples.com
+
+.image img/staples.png _ 800
+
+* Food Sponsor - GetWrecked.com
+
+.image img/getwrecked.png 500 _
+
+* Meetup Information
+
+- Code of Conduct: https://golang.org/conduct
+- Twitter Account: @FraminghamGo
+- Gopher Slack: https://invite.slack.golangbridge.org/
+- Channel: #framingham-ma
+
+* Announcements
+
+- GoBridge
+- March - Mark Bates! http://gobuffalo.io
+- Thank you to Dave Cheney for modifications to the go 1.8 slide deck
 
 * License and Materials
 
@@ -70,20 +98,20 @@ The overhead of deferred function calls has been reduced by nearly half.
 
  name           old time/op  new time/op  delta
  Defer-4        75.1ns ± 1%  43.3ns ± 1%  -42.31%   (p=0.000 n=8+10)
- 
+
  In reality, this speeds up defer by about 2.2X. The two benchmarks
  below compare a Lock/defer Unlock pair (DeferLock) with a Lock/Unlock
  pair (NoDeferLock). NoDeferLock establishes a baseline cost, so these
  two benchmarks together show that this change reduces the overhead of
  defer from 61.4ns to 27.9ns.
- 
+
  name           old time/op  new time/op  delta
  DeferLock-4    77.4ns ± 1%  43.9ns ± 1%  -43.31%  (p=0.000 n=10+10)
  NoDeferLock-4  16.0ns ± 0%  15.9ns ± 0%   -0.39%    (p=0.000 n=9+8)
 
 .link https://golang.org/cl/29656 Source: CL 29656
 .link https://dave.cheney.net/2016/11/19/go-1-8-toolchain-improvements#defer Defer and cgo improvements
- 
+
 * Cgo
 
 The overhead of cgo calls is reduced by more than half:
@@ -147,7 +175,7 @@ The number of platforms Go supports, on balance, continues to grow.
 
 * Go 1.8 may be the last to support ARMv5
 
-Supporting ARMv5 has been a problem for several releases. 
+Supporting ARMv5 has been a problem for several releases.
 
 Currently we have no ARMv5 builders so have no idea if Go 1.8 actually works on real ARMv5 hardware (we test on ARMv7).
 
@@ -391,7 +419,7 @@ Reads/Writes to other file descriptors have traditionally consumed an OS thread 
 Recently Ian Lance Taylor landed a refactor that broken our the `runtime` polling subsystem and extended to work for the rest of the `os` package.
 
 .link https://go-review.googlesource.com/#/c/36799/ net: refactor poller into new internal/poll package
-.link https://go-review.googlesource.com/#/c/36800/ os: use poller for file I/O 
+.link https://go-review.googlesource.com/#/c/36800/ os: use poller for file I/O
 
 There is no sign of a programmer accessible poller, yet.
 
@@ -416,4 +444,3 @@ It's described as _pre_alpha_ at the moment, but you should check it out, and le
 Upgrade to Go 1.8, now!
 
 It's literally the best version of Go, _ever_.
-
